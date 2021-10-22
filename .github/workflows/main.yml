@@ -29,10 +29,23 @@ jobs:
           cd ..
           rm -rf ./blog-demo
           git clone https://github.com/DarkLight-Long/DarkLight.git
-          pwd
-          ls
           git clone https://github.com/DarkLight-Long/blog-demo.git
+      - name: Build DarkLight and cp dist/* to demo-blog folder
+        run: |
+          cd ./DarkLight
+          npm install
+          npm run build
+          /bin/cp dist/* ../blog-demo
+          cd ../blog-demo
           pwd
           ls
+      - name: Push demo-blog to github rep
+        run: |
+          cd ./blog-demo
+          git config --globle user.name "DarkLight-Long"
+          git config --globle user.email "854590394@qq.com"
+          git add ./*
+          git commit -m "$(date)"
+          git push
       
       
