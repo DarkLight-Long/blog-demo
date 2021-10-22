@@ -44,8 +44,8 @@ jobs:
       - name: Push demo-blog to github rep
         run: |
           cd ../blog-demo
-          git config --globle user.name "DarkLight-Long"
-          git config --globle user.email "854590394@qq.com"
+          git config --global user.name "DarkLight-Long"
+          git config --global user.email "854590394@qq.com"
           git add ./*
           git commit -m "$(date)"
           git push
