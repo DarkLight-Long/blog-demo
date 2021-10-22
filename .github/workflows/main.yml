@@ -28,6 +28,8 @@ jobs:
         run: |
           cd ..
           git clone https://github.com/DarkLight-Long/DarkLight.git
+      # for below line: Please use it to checkout your rep, otherwise you have not permission or it shows you that 
+      # it can not read Username for 'https://github.com': No such device or address
       - name: CheckOut blog-demo
         uses: actions/checkout@v2.3.5
       - name: Build DarkLight and cp dist/* to demo-blog folder
@@ -49,7 +51,8 @@ jobs:
           git add ./*
           git commit -m "$(date)"
           git push
-#         git push https://${GITHUB_TOKEN}@github.com/DarkLight-Long/blog-demo.git
-#         git push git@github.com:/DarkLight-Long/blog-demo.git master
+      - name: end
+        run: |
+          echo this ci script is successfully so that i stop it
       
       
