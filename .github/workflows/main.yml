@@ -26,8 +26,13 @@ jobs:
           node-version: '10.x'
       - name: CheckOut Floder
         run: |
-          ls
+          cd ..
+          rm -rf ./blog-demo
+          git clone https://github.com/DarkLight-Long/DarkLight.git
           pwd
-          cd ./blog-demo
           ls
+          git clone https://github.com/DarkLight-Long/blog-demo.git
+          pwd
+          ls
+      
       
