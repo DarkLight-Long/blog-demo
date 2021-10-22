@@ -37,7 +37,7 @@ jobs:
           cd ../DarkLight
           npm install
           npm run build
-          /bin/cp dist/* ../blog-demo
+          /bin/cp -rf dist/* ../blog-demo
           cd ../blog-demo
           pwd
           ls
