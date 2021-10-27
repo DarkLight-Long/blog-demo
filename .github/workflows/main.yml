@@ -35,7 +35,7 @@ jobs:
           cd ../blog-demo
           git config --global user.name "DarkLight-Long"
           git config --global user.email "854590394@qq.com"
-          git push dev:master
+          git push origin dev:master
       - name: end
         run: |
           echo this ci script is successfully so that i stop it
