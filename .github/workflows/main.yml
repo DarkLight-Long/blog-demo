@@ -29,11 +29,10 @@ jobs:
       - name: CheckOut blog-demo
         uses: actions/checkout@v2.3.5
         with:
-          ref: dev
+          ref: master
       - name: Push demo-blog to github rep
         run: |
           cd ../blog-demo
-          git checkout master
           git merge dev
           git config --global user.name "DarkLight-Long"
           git config --global user.email "854590394@qq.com"
