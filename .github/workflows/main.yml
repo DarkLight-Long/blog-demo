@@ -28,6 +28,8 @@ jobs:
       # it can not read Username for 'https://github.com': No such device or address
       - name: CheckOut blog-demo
         uses: actions/checkout@v2.3.5
+        with:
+          ref: master
       - name: Push demo-blog to github rep
         run: |
           cd ../blog-demo
