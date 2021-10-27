@@ -29,16 +29,13 @@ jobs:
       - name: CheckOut blog-demo
         uses: actions/checkout@v2.3.5
         with:
-          ref: master
+          ref: dev
       - name: Push demo-blog to github rep
         run: |
           cd ../blog-demo
-          git merge dev
           git config --global user.name "DarkLight-Long"
           git config --global user.email "854590394@qq.com"
-          git add ./*
-          git commit -m "$(date)"
-          git push master:master
+          git push dev:master
       - name: end
         run: |
           echo this ci script is successfully so that i stop it
